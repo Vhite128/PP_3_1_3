@@ -60,8 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable();;
     }
 
-    // Необходимо для шифрования паролей
-    // В данном примере не используется, отключен
+
     @Bean
     public static NoOpPasswordEncoder passwordEncoder() {
         return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();

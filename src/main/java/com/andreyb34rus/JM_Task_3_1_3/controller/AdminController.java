@@ -45,7 +45,7 @@ public class AdminController {
         return "redirect:/admin";
     }
 
-    @PostMapping("/updateUser/{id}")
+    @PostMapping("/{id}")
     public String updateUser(@ModelAttribute("emptyUser") User user, @PathVariable("id") Long id,
                              @RequestParam(value = "userRolesSelector") String[] selectResult) throws Exception {
         for (String s : selectResult) {
